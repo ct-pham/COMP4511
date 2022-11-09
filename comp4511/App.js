@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Homepage from './Components/Homepage';
 import AllEarnings from './Components/AllEarnings';
 import ProgramEarnings from './Components/ProgramEarnings';
+import AllPrograms from './Components/AllPrograms';
+import ProgramDetails2 from './Components/ProgramDetails2';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,8 @@ export default function App() {
         <Stack.Screen name="Home" component={Homepage}/>
         <Stack.Screen name="AllEarnings" component={AllEarnings}/>
         <Stack.Screen name="ProgramEarnings" component={ProgramEarnings}/>
+        <Stack.Screen name="AllPrograms" component={AllPrograms}/>
+        <Stack.Screen name="ProgramDetails2" component={ProgramDetails2}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
