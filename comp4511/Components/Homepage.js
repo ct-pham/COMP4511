@@ -18,7 +18,7 @@ export default function Homepage() {
         </TouchableOpacity>
       </View>
       <View style={styles.container2}>
-        <TouchableOpacity style={styles.search}>
+        <TouchableOpacity style={styles.search} onPress={() => navigation.navigate('Search')}>
           <Text style={styles.searchText}>Search items for their disposal options</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.allPrograms} onPress={() => navigation.navigate('AllPrograms')}>

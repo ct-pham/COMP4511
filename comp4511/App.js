@@ -10,11 +10,11 @@ import AllPrograms from './Components/AllPrograms';
 import ProgramDetails2 from './Components/ProgramDetails2';
 import Register from './Components/Register';
 import Login from './Components/Login';
-import Compare from './Components/compareProgram/Compare';
+// import Compare from './Components/compareProgram/Compare';
+import Search from './Components/Search';
 
 const Stack = createNativeStackNavigator();
 
- 
 export default function App() {
   return (
     <NavigationContainer>
@@ -26,6 +26,7 @@ export default function App() {
         <Stack.Screen name="ProgramEarnings" component={ProgramEarnings}/>
         <Stack.Screen name="AllPrograms" component={AllPrograms}/>
         <Stack.Screen name="ProgramDetails2" component={ProgramDetails2}/>
+        <Stack.Screen name="Search" component={Search}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
