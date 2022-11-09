@@ -14,7 +14,7 @@ export default function Compare() {
     return (
         <SafeAreaView style={styles.container}>
             <View style = {styles.titleContainer}>
-                <Text style = {styles.title}> Compare</Text>
+                <Text style = {styles.title}> Compare Programs</Text>
             </View>
             <FlatList
                 data = {ProgramDetails}

@@ -49,12 +49,14 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 32,
         color: '#ffffff',
+        marginTop: 10,
         marginBottom: 20,
     },
     location: {
         fontSize: 20,
         color: '#ffffff',
-        textAlign: 'left',
+        transform: [{translateX: -130}],
+        marginBottom: 10,
     },
     text: {
         fontSize: 20,
