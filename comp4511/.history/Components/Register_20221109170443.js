@@ -62,7 +62,6 @@ export default function Register( {navigation}) {
             
             <TouchableOpacity
                 style = {styles.btnStyle2}
-                onPress={() => navigation.navigate('Home')}
             >
                 <Text style={styles.btn2}>Use app without signing up</Text>
             </TouchableOpacity>
