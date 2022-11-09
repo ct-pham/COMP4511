@@ -29,7 +29,7 @@ export default function Compare() {
 const styles = StyleSheet.create({
     titleContainer: {
 
-        height: '10%',
+        height: '2.5%',
 
     },
     title: {

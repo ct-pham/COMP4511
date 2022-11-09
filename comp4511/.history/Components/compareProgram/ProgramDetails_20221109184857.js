@@ -5,7 +5,6 @@ export default [
         location: 'Location X',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
         
     },
     {
@@ -14,7 +13,6 @@ export default [
         location: 'Location Y',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
         
     },
     {
@@ -23,7 +21,6 @@ export default [
         location: 'Location Z',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
         
     },
     {
@@ -32,7 +29,6 @@ export default [
         location: 'Location A',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
         
     },
     {
@@ -42,7 +38,6 @@ export default [
         Earning: 'Earnings',
         Total: '$0.10',
         
-        image: require('./map.jpg'),
     },
     {  
         id: '6',
@@ -50,7 +45,6 @@ export default [
         location: 'Location C',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
     },
     {
         id: '7',
@@ -58,7 +52,6 @@ export default [
         location: 'Location D',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
     },
     {
         id: '8',
@@ -66,7 +59,6 @@ export default [
         location: 'Location E',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
     },
     {
         id: '9',
@@ -74,8 +66,7 @@ export default [
         location: 'Location F',
         Earning: 'Earnings',
         Total: '$0.10',
-        image: require('./map.jpg'),
     },
-
+    
 
 ]

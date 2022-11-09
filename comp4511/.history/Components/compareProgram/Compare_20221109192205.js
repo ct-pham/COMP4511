@@ -28,16 +28,14 @@ export default function Compare() {
 
 const styles = StyleSheet.create({
     titleContainer: {
-
-        height: '10%',
+        marginTop: 20,
+        height: '2.5%',
 
     },
     title: {
         fontSize: 32,
-        marginTop: 50,
         color: '#587C4B',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginTop: 10,
     }
 });

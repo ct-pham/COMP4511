@@ -19,14 +19,10 @@ export default function Items ({item}) {
             <View style = {[styles.programContainer, {width}]}>
                 <Text style = {styles.title}>{item.title}</Text>
                 <Text style = {styles.location}>{item.location}</Text>
-                
-                <Image
-                    source = {item.image}
-                    style = {styles.image}
-                />
-                <View style = {styles.textBox}>
-                    <Text style = {styles.text}>{item.Earning}</Text>
-                    <Text style = {styles.text}>{item.Total}</Text>
+
+                <View>
+                    <Text style = {styles.Earnings}>{item.Earning}</Text>
+                    <Text style = {styles.Total}>{item.Total}</Text>
 
                 </View>
             </View>
@@ -40,42 +36,20 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: StatusBar.currentHeight || 0,
         
-    },
+        
+      },
     item: {
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
-    },
+      },
     title: {
         fontSize: 32,
-        color: '#ffffff',
-        marginBottom: 20,
-    },
-    location: {
-        fontSize: 20,
-        color: '#ffffff',
-        textAlign: 'left',
-    },
-    text: {
-        fontSize: 20,
-        color: '#ffffff',
-    },
-    textBox: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '90%',
-        marginTop: 10,
-        marginBottom: 10,
-    },
-
+      },
     programContainer: {
         backgroundColor: '#587C4B',
         alignItems: 'center',
-        marginBottom: 1,
+        margin: 0.5,
     },
-    image: {
-        width: 350,
-        height: 200,
-    }
 
 });

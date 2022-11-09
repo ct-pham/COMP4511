@@ -24,9 +24,9 @@ export default function Items ({item}) {
                     source = {item.image}
                     style = {styles.image}
                 />
-                <View style = {styles.textBox}>
-                    <Text style = {styles.text}>{item.Earning}</Text>
-                    <Text style = {styles.text}>{item.Total}</Text>
+                <View>
+                    <Text style = {styles.Earnings}>{item.Earning}</Text>
+                    <Text style = {styles.Total}>{item.Total}</Text>
 
                 </View>
             </View>
@@ -49,24 +49,16 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 32,
         color: '#ffffff',
-        marginBottom: 20,
     },
     location: {
-        fontSize: 20,
-        color: '#ffffff',
-        textAlign: 'left',
-    },
-    text: {
-        fontSize: 20,
+        fontSize: 16,
         color: '#ffffff',
     },
-    textBox: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '90%',
-        marginTop: 10,
-        marginBottom: 10,
+    Earnings: {
+        fontSize: 16,
+        color: '#ffffff',
     },
+
 
     programContainer: {
         backgroundColor: '#587C4B',
@@ -74,7 +66,7 @@ const styles = StyleSheet.create({
         marginBottom: 1,
     },
     image: {
-        width: 350,
+        width: 200,
         height: 200,
     }
 

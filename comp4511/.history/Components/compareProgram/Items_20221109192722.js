@@ -18,7 +18,7 @@ export default function Items ({item}) {
 
             <View style = {[styles.programContainer, {width}]}>
                 <Text style = {styles.title}>{item.title}</Text>
-                <Text style = {styles.location}>{item.location}</Text>
+                <Text style = {styles.text}>{item.location}</Text>
                 
                 <Image
                     source = {item.image}
@@ -49,23 +49,10 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 32,
         color: '#ffffff',
-        marginBottom: 20,
-    },
-    location: {
-        fontSize: 20,
-        color: '#ffffff',
-        textAlign: 'left',
     },
     text: {
         fontSize: 20,
         color: '#ffffff',
-    },
-    textBox: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '90%',
-        marginTop: 10,
-        marginBottom: 10,
     },
 
     programContainer: {
@@ -74,7 +61,7 @@ const styles = StyleSheet.create({
         marginBottom: 1,
     },
     image: {
-        width: 350,
+        width: 200,
         height: 200,
     }
 
