@@ -8,13 +8,19 @@ import AllEarnings from './Components/AllEarnings';
 import ProgramEarnings from './Components/ProgramEarnings';
 import AllPrograms from './Components/AllPrograms';
 import ProgramDetails2 from './Components/ProgramDetails2';
+import Register from './Components/Register';
+import Login from './Components/Login';
+import Compare from './Components/compareProgram/Compare';
 
 const Stack = createNativeStackNavigator();
 
+ 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Homepage}/>
         <Stack.Screen name="AllEarnings" component={AllEarnings}/>
         <Stack.Screen name="ProgramEarnings" component={ProgramEarnings}/>
@@ -25,11 +31,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
