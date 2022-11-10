@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Items from './Items';
 
-import ProgramDetails from './ProgramDetails';
+import ProgramDetails from '../ProgramDetails';
 
 export default function Compare() {
     return (
