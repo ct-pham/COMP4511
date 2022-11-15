@@ -12,7 +12,9 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import ProgramDetails from '../ProgramDetails';
 import LeftIcon from 'react-native-vector-icons/AntDesign';
 
-export default function Compare() {
+import { useNavigation } from '@react-navigation/native';
+
+export default function Compare(navigation) {
     return (
         <SafeAreaView style={styles.container}>
             <LeftIcon 
@@ -44,6 +46,7 @@ export default function Compare() {
                     data = {ProgramDetails}
                     renderItem={({ item }) => <Items item = {item} />}
                     showsVerticalScrollIndicator
+                    navigate = {navigation.navigate}
                     
                 />
             </View>

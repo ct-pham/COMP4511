@@ -10,12 +10,18 @@ import {
 import { useState } from 'react';
 
 
+
 export default function Items ({item}) {
 
-    return (
-        <View style={ styles.container}>
 
-            <View style = {styles.programContainer}>
+    return (
+        <View 
+            style={ styles.container}
+        >
+
+            <TouchableOpacity style = {styles.programContainer}
+                onPress={() => navigation.navigate('ProgramPage', {item: item})}
+            >
                 
                 <Image
                     source = {item.image}
@@ -24,10 +30,13 @@ export default function Items ({item}) {
                 <View style = {styles.textBox}>
                     <Text style = {styles.title}>{item.title}</Text>
                     <TouchableOpacity style = {styles.button}>
-                        <Text style = {styles.buttonText}>Log Item</Text>
+                        <Text style = {styles.buttonText}
+                            onPress={() => navigation.navigate('LogItem', {item: item})}
+                        >Log Item</Text>
+
                     </TouchableOpacity>
                 </View>
-            </View>
+            </TouchableOpacity>
 
         </View>
     )
@@ -40,7 +49,7 @@ const styles = StyleSheet.create({
         borderRadius:20,
         marginBottom: 20,
         shadowColor: '#171717',
-        shadowOffset: {width: -2, height: 4},
+        shadowOffset: {width: -10, height: 4},
         shadowOpacity: 0.2,
         shadowRadius: 3,
     },

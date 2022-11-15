@@ -5,10 +5,14 @@ import {
     Image,
 } from 'react-native';
 
-export default function ProgramPage () {
+export default function ProgramPage ({item}) {
     return (
         <View style={ styles.container}>
             <View style = {styles.programContainer}>
+                <Image source={item.image}/>  
+                <Text style = {styles.title}>{item.title}</Text>
+                <Text style = {styles.description}>{item.description}</Text>
+
             </View>
         </View>
     )
