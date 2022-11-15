@@ -1,11 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 
 export default function Homepage() {
   const navigation = useNavigation();
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          'Share your earnings with your friends!',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -18,14 +37,14 @@ export default function Homepage() {
         </TouchableOpacity>
       </View>
       <View style={styles.container2}>
-        <TouchableOpacity style={styles.search}>
+        <TouchableOpacity style={styles.search} onPress={() => navigation.navigate('Search')}>
           <Text style={styles.searchText}>Search items for their disposal options</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.allPrograms}>
+        <TouchableOpacity style={styles.allPrograms} onPress={() => navigation.navigate('AllPrograms')}>
           <Text style={styles.allProgramsText}>View All Cash Back Programs</Text>
         </TouchableOpacity>
         <Text style={styles.otherFeatures}>Other Features</Text>
-        <TouchableOpacity style={styles.other1}>
+        <TouchableOpacity style={styles.other1} onPress={onShare}>
           <Text style={styles.otherText}>Share Earnings</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.other}>
