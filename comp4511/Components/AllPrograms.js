@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
-import ModalDropdown from 'react-native-modal-dropdown';
+import SelectDropdown from 'react-native-select-dropdown';
 
 export default function AllPrograms() {
   const navigation = useNavigation();
@@ -13,11 +13,25 @@ export default function AllPrograms() {
     <View style={styles.container}>
       <View style={styles.container1}>
         <Text style={styles.title}>Cash Back Programs</Text>
-        <ModalDropdown options={['option 1', 'option 2']}/>
+        <SelectDropdown
+          data={['closest to current location', 'highest earnings', 'most frequent participation', 'alphabetical']}
+          defaultButtonText='Sort by...'
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem
+          }}
+          rowTextForSelection={(item, index) => {
+            return item
+          }}
+          buttonStyle={styles.dropdown}
+          buttonTextStyle={styles.rowText}
+          rowTextStyle={styles.rowText}
+          // renderDropdownIcon={} put a react icon
+          // dropdownIconPosition={'right'}
+        />
       </View>
       <View style={styles.container2}>
         <View style={{justifyContent: 'space-between', width: '88%'}}>
-          <Text style={styles.optin}>OPT IN</Text>
+          <Text style={styles.optIn}>OPT IN</Text>
         </View>
         <TouchableOpacity disabled={true} style={styles.program}>
           <TouchableOpacity style={{flex: 1}} onPress={() => navigation.navigate('ProgramDetails2')}>
@@ -65,7 +79,23 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#587C4B',
   },
-  optin: {
+  dropdown: {
+    borderColor:'#587C4B',
+    borderWidth: 2,
+    borderRadius: 15,
+    width: '80%',
+    height: 40,
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor:'#f2f2f2',
+  },
+  row: {
+    backgroundColor:'#f2f2f2',
+  },
+  rowText: {
+    color: '#587C4B'
+  },
+  optIn: {
     alignSelf: 'flex-end',
     color: '#fff',
     fontWeight: '700',

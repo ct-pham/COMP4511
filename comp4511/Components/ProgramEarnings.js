@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
+import SelectDropdown from 'react-native-select-dropdown';
+
 
 export default function ProgramEarnings() {
   const navigation = useNavigation();
@@ -10,7 +12,21 @@ export default function ProgramEarnings() {
     <View style={styles.container}>
       <View style={styles.container1}>
         <Text style={styles.title}>Program Earnings</Text>
-        <Text style={styles.title}>Dropdown goes here</Text>
+        <SelectDropdown
+          data={['Program X', 'Program Y', 'Program Z']}
+          defaultValue='Program X'
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem
+          }}
+          rowTextForSelection={(item, index) => {
+            return item
+          }}
+          buttonStyle={styles.dropdown}
+          buttonTextStyle={styles.rowText}
+          rowTextStyle={styles.rowText}
+          // renderDropdownIcon={} put a react icon
+          // dropdownIconPosition={'right'}
+        />
         <View style={{flexDirection:"row"}}>
           <Text style={styles.totalEarnings}>Total Earnings</Text>
           <Text style={styles.totalEarningsAmount}>$37.50</Text>
@@ -53,6 +69,22 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '700',
     color: '#587C4B',
+  },
+  dropdown: {
+    borderColor:'#587C4B',
+    borderWidth: 2,
+    borderRadius: 15,
+    width: '80%',
+    height: 40,
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor:'#f2f2f2',
+  },
+  row: {
+    backgroundColor:'#f2f2f2',
+  },
+  rowText: {
+    color: '#587C4B'
   },
   totalEarnings: {
     fontSize: 28,

@@ -12,6 +12,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 // import Compare from './Components/compareProgram/Compare';
 import Search from './Components/Search';
+import Placeholder from './Components/Placeholder';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ export default function App() {
         <Stack.Screen name="AllPrograms" component={AllPrograms}/>
         <Stack.Screen name="ProgramDetails2" component={ProgramDetails2}/>
         <Stack.Screen name="Search" component={Search}/>
+        <Stack.Screen name="Placeholder" component={Placeholder}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
