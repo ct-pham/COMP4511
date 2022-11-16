@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
+import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
 
 export default function AllEarnings() {
   const navigation = useNavigation();
@@ -10,7 +11,13 @@ export default function AllEarnings() {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
-        <Text style={styles.title}>All Earnings</Text>
+        <View style={styles.heading}>
+          <Text style={styles.title}>All Earnings</Text>
+          <View style={{alignSelf: 'flex-end', paddingLeft:70}}>
+            <SimpleLineIcons name='pencil' size={25} color='#587C4B' />
+            <Text style={styles.edit}>Edit</Text>
+          </View>
+        </View>
         <SelectDropdown
           data={['View all earnings', 'View earnings from past week', 'View earnings from past month']}
           defaultValue='View all earnings'
@@ -23,8 +30,10 @@ export default function AllEarnings() {
           buttonStyle={styles.dropdown}
           buttonTextStyle={styles.rowText}
           rowTextStyle={styles.rowText}
-          // renderDropdownIcon={} put a react icon
-          // dropdownIconPosition={'right'}
+          renderDropdownIcon={isOpened => {
+            return <Ionicons name={isOpened ? 'chevron-up' : 'chevron-down'} color={'#587C4B'} size={25} />;
+          }}
+          dropdownIconPosition={'right'}
         />
         <View style={{flexDirection:"row"}}>
           <Text style={styles.totalEarnings}>Total Earnings</Text>
@@ -68,9 +77,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'centre',
   },
+  heading: {
+    flexDirection:'row', 
+    paddingLeft:100, 
+    paddingTop:20, 
+    paddingBottom:15
+  },
   title: {
     fontSize: 40,
     fontWeight: '700',
+    color: '#587C4B',
+  },
+  edit: {
+    fontSize: 15,
     color: '#587C4B',
   },
   dropdown: {
@@ -82,18 +101,19 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     backgroundColor:'#f2f2f2',
+    marginBottom: 25,
   },
   row: {
     backgroundColor:'#f2f2f2',
   },
   rowText: {
-    color: '#587C4B'
+    color: '#587C4B',
+    textAlign: 'left',
   },
   totalEarnings: {
     fontSize: 28,
     fontWeight: '700',
     color: '#587C4B',
-    // textAlign: 'left',
     flex: 1,
     paddingLeft: '5%',
   },
@@ -107,29 +127,29 @@ const styles = StyleSheet.create({
   item: {
     borderBottomWidth:1,
     borderColor:'#fff',
-    // alignItems:'center',
-    // justifyContent:'center',
     width:'90%',
     height:60,
     backgroundColor:'#587C4B',
-    flexDirection:"row"
+    flexDirection:"row",
+    paddingVertical:10
   },
   itemText: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: '700',
     color: '#fff',
     alignItems: 'left',
   },
   itemSubtext: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '700',
     color: '#fff'
   },
   itemEarning: {
-    fontSize: 20,
+    fontSize: 28,
     fontWeight: '700',
     color: '#fff',
-    textAlign: 'right'
+    textAlign: 'right',
+    paddingVertical: 5
   },
   programs: {
     borderWidth:2,
@@ -140,6 +160,8 @@ const styles = StyleSheet.create({
     height:50,
     backgroundColor:'#fff',
     borderRadius:20,
+    position:'absolute',
+    bottom:70,
   },
   programsText: {
     fontSize: 20,
