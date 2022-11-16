@@ -3,6 +3,8 @@ import { StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
+import { Ionicons } from '@expo/vector-icons';
+
 
 export default function AllPrograms() {
   const navigation = useNavigation();
@@ -25,8 +27,10 @@ export default function AllPrograms() {
           buttonStyle={styles.dropdown}
           buttonTextStyle={styles.rowText}
           rowTextStyle={styles.rowText}
-          // renderDropdownIcon={} put a react icon
-          // dropdownIconPosition={'right'}
+          renderDropdownIcon={isOpened => {
+            return <Ionicons name={isOpened ? 'chevron-up' : 'chevron-down'} color={'#587C4B'} size={25} />;
+          }}
+          dropdownIconPosition={'right'}
         />
       </View>
       <View style={styles.container2}>
@@ -72,12 +76,14 @@ const styles = StyleSheet.create({
     height: '80%',
     backgroundColor: '#587C4B',
     alignItems: 'center',
-    // justifyContent: 'centre',
+    paddingTop: 30,
   },
   title: {
     fontSize: 40,
     fontWeight: '700',
     color: '#587C4B',
+    paddingTop:30,
+    paddingBottom:20,
   },
   dropdown: {
     borderColor:'#587C4B',
@@ -93,12 +99,14 @@ const styles = StyleSheet.create({
     backgroundColor:'#f2f2f2',
   },
   rowText: {
-    color: '#587C4B'
+    color: '#587C4B',
+    textAlign:'left',
   },
   optIn: {
     alignSelf: 'flex-end',
     color: '#fff',
     fontWeight: '700',
+    paddingBottom:15,
   },
   program: {
     borderBottomWidth:1,
@@ -125,6 +133,8 @@ const styles = StyleSheet.create({
     height:50,
     backgroundColor:'#fff',
     borderRadius:20,
+    position: 'absolute',
+    bottom: 60
   },
   logText: {
     fontSize: 18,

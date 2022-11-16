@@ -6,6 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 // import { SearchBar } from 'react-native-elements';
 import SearchBar from "react-native-dynamic-search-bar";
 import SearchItems from './SearchItems';
+import { Ionicons } from '@expo/vector-icons';
+
 
 export default function Search() {
   const navigation = useNavigation();
@@ -34,11 +36,10 @@ export default function Search() {
   const ItemView = ({item}) => {
     return (
       // Flat List Item
-      <Text
-        style={styles.itemStyle}
-        onPress={() => navigation.navigate('Placeholder')}>
-        {item.name}
-      </Text>
+      <TouchableOpacity style={styles.results} onPress={() => navigation.navigate('Placeholder')}>
+        <Text style={styles.itemStyle}>{item.name}</Text>
+        <Ionicons name='chevron-forward' color={'#587C4B'} size={25}/>
+      </TouchableOpacity>
     );
   };
  
@@ -55,18 +56,19 @@ export default function Search() {
     );
   };
 
-  const getItem = (item) => {
-    // Function for click on an item
-    alert('Id : ' + item.id + ' Title : ' + item.name);
-  };
+  // const getItem = (item) => {
+  //   // Function for click on an item
+  //   alert('Id : ' + item.id + ' Title : ' + item.name);
+  // };
 
   return (
     <View style={styles.container}>
       <SearchBar
-        placeholder="Search here"
+        placeholder="Search here..."
         // onPress={() => alert("onPress")}
         onChangeText={(text) => searchFilterFunction(text)}
-        value={search}      
+        value={search}
+        style={styles.search}
       />
       <FlatList
         style={styles.list}
@@ -86,11 +88,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  itemStyle: {
-    padding: 10,
+  search: {
     height: 50,
     fontSize: 20,
-    color: '#587C4B'
+    textColor: "#587C4B",  
+    iconColor: "#587C4B",
+    cancelIconColor: "#587C4B",
+    color: "#587C4B",
+  },
+  itemStyle: {
+    paddingVertical: 15,
+    height: 50,
+    fontSize: 20,
+    color: '#587C4B',
+    flex:1,
+  },
+  results: {
+    flexDirection: 'row',
+    // justifyContent: 'center',
+    alignItems: 'center',
   },
   list: {
     width: '90%',
