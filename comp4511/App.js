@@ -17,6 +17,7 @@ import ProgramPage from './Components/ItemResults/ProgramPage';
 
 import Search from './Components/Search';
 import Placeholder from './Components/Placeholder';
+import SelectCompare from './Components/ItemResults/SelectCompare';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ export default function App() {
           headerShown: false
         }}
       >
-        <Stack.Screen name="Register" component={Register} />
+        {/* <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Homepage}/>
         <Stack.Screen name="AllEarnings" component={AllEarnings}/>
@@ -36,11 +37,12 @@ export default function App() {
         <Stack.Screen name="AllPrograms" component={AllPrograms}/>
         <Stack.Screen name="ProgramDetails2" component={ProgramDetails2}/>
         <Stack.Screen name="Search" component={Search}/>
-        <Stack.Screen name="Placeholder" component={Placeholder}/>
+        <Stack.Screen name="Placeholder" component={Placeholder}/>  */}
         <Stack.Screen name="ItemResults" component={ItemResults}/>
-        <Stack.Screen name="ProgramPage" component={ProgramPage}/>
         <Stack.Screen name="LogItem" component={LogItem}/>
         <Stack.Screen name="Compare" component={Compare}/>
+        <Stack.Screen name="SelectCompare" component={SelectCompare}/>
+        <Stack.Screen name="ProgramPage" component={ProgramPage}/>
 
       </Stack.Navigator>
     </NavigationContainer>
