@@ -20,7 +20,7 @@ export default function Items ({item}) {
         >
 
             <TouchableOpacity style = {styles.programContainer}
-                onPress={() => navigation.navigate('ProgramPage', {item: item})}
+                onPress={() => navigation.navigate('ProgramPage')}
             >
                 
                 <Image
@@ -31,7 +31,7 @@ export default function Items ({item}) {
                     <Text style = {styles.title}>{item.title}</Text>
                     <TouchableOpacity style = {styles.button}>
                         <Text style = {styles.buttonText}
-                            onPress={() => navigation.navigate('LogItem', {item: item})}
+                            onPress={() => navigation.navigate('LogItem')}
                         >Log Item</Text>
 
                     </TouchableOpacity>
