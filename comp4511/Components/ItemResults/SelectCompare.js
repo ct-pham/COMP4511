@@ -1,20 +1,14 @@
-import { 
-    StyleSheet, 
-    Text, 
-    SafeAreaView, 
-    statusBar,
-    FlatList,
+import {
     View,
+    Text,
+    StyleSheet,
+    Image,
+    useWindowDimensions,
     TouchableOpacity,
+    StatusBar,
 } from 'react-native';
-import Items from './ItemCards';
-import Icon from 'react-native-vector-icons/AntDesign';
-import ProgramDetails from '../ProgramDetails';
-import LeftIcon from 'react-native-vector-icons/AntDesign';
 
-import { useNavigation } from '@react-navigation/native';
-
-export default function Compare(navigation) {
+const SelectCompare = (item) => {
     return (
         <SafeAreaView style={styles.container}>
             <LeftIcon 
@@ -29,7 +23,7 @@ export default function Compare(navigation) {
                 <Text style = {styles.subtitle}> Disposal Options</Text>
                 <TouchableOpacity 
                     style = {styles.buttonStyle}
-                    onPress = {() => navigation.navigate('SelectCompare')} 
+                    onPress = {() => setToggle(!toggle)} 
                 >
                     <View style = {styles.iconContainer}>
                         <Icon
@@ -53,10 +47,17 @@ export default function Compare(navigation) {
             </View>
 
         </SafeAreaView>
-    );
+    )
 }
 
+export default SelectCompare;
+
 const styles = StyleSheet.create({
+    container: {
+        position: 'absolute',
+        backgroundColor: '#fff',
+        opacity: 0.5,
+    },
     LeftIcon: {
         transform: [{ translateX: 20 }],  
     },

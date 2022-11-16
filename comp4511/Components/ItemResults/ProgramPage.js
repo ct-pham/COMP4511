@@ -12,6 +12,12 @@ export default function ProgramPage ({item}) {
                 <Image source={item.image}/>  
                 <Text style = {styles.title}>{item.title}</Text>
                 <Text style = {styles.description}>{item.description}</Text>
+                <TouchableOpacity 
+                    onPress = {() => navigation.navigate('LogItem')}
+                    style = {styles.button}
+                >
+                    <Text style = {styles.buttonText}>Log Item</Text>
+                </TouchableOpacity>
 
             </View>
         </View>
