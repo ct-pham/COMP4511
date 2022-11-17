@@ -43,7 +43,7 @@ Scan the QR code in the terminal with your device's camera to view the app. You 
 
 Start your emulator of choice in android studio for android devices or on mac for ios devices. 
 
-###The recommended devices are:
+### The recommended devices are:
 
 * `Google Pixel 6`
 * `iphone 13/14`
