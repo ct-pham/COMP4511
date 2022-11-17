@@ -37,9 +37,16 @@ This will start the metro bundler. There are two ways to view the app:
 
 ### View with Expo Go App
 
-Scan the QR code in the terminal to view the app. You will need the Expo Go app from the app store. 
+Scan the QR code in the terminal with your device's camera to view the app. You will need the Expo Go app from the app store. 
 
 ### View with Emulator
 
+Start your emulator of choice in android studio for android devices or on mac for ios devices. 
+
+###The recommended devices are:
+
+* `Google Pixel 6`
+* `iphone 13/14`
+* `iphone 13/14 pro`
 
 
