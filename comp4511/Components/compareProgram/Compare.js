@@ -13,6 +13,7 @@ import LeftIcon from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Compare() {
+    const navigation = useNavigation();
     return (
         
         <SafeAreaView style={styles.container}>
