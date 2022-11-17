@@ -1,52 +1,63 @@
-import {
+import { 
+    StyleSheet, 
+    Text, 
+    SafeAreaView, 
+    statusBar,
+    FlatList,
     View,
-    Text,
-    StyleSheet,
-    Image,
-    useWindowDimensions,
     TouchableOpacity,
-    StatusBar,
 } from 'react-native';
+import ItemsCompare from './ItemsCompare';
+import Icon from 'react-native-vector-icons/AntDesign';
+import ProgramDetails from '../ProgramDetails';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
+
+import { useNavigation } from '@react-navigation/native';
+
 
 const SelectCompare = (item) => {
+    const navigation = useNavigation();
     return (
-        <SafeAreaView style={styles.container}>
-            <LeftIcon 
-                style = {styles.LeftIcon}
-                name = "left"
-                size = {32}
-                color = "#587C4B"
-            />
-            <View style = {styles.titleContainer}>
-                
-                <Text style = {styles.title}> Glass Bottle</Text>
-                <Text style = {styles.subtitle}> Disposal Options</Text>
-                <TouchableOpacity 
-                    style = {styles.buttonStyle}
-                    onPress = {() => setToggle(!toggle)} 
-                >
-                    <View style = {styles.iconContainer}>
-                        <Icon
-                            style = {styles.icon}
-                            name = 'filter'
-                            size = {32}
-                            color = '#587C4B'
-                        />
-                        <Text style = {styles.buttontxt}>Select to Compare </Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-            <View style = {styles.list}>
-                <FlatList
-                    data = {ProgramDetails}
-                    renderItem={({ item }) => <Items item = {item} />}
-                    showsVerticalScrollIndicator
-                    navigate = {navigation.navigate}
-                    
-                />
-            </View>
+        <View style={styles.container}>
 
-        </SafeAreaView>
+            <SafeAreaView >
+                <LeftIcon 
+                    style = {styles.LeftIcon}
+                    name = "left"
+                    size = {32}
+                    color = "#587C4B"
+                    onPress = {() => navigation.navigate('ItemResults')}
+                />
+                <View style = {styles.titleContainer}>
+                    
+                    <Text style = {styles.title}> Glass Bottle</Text>
+                    <Text style = {styles.subtitle}> Disposal Options</Text>
+                    <TouchableOpacity 
+                        style = {styles.buttonStyle}
+                        onPress = {() => navigation.navigate('ItemResults')} 
+                    >
+                        <View style = {styles.iconContainer}>
+                            <Icon
+                                style = {styles.icon}
+                                name = 'filter'
+                                size = {32}
+                                color = '#587C4B'
+                            />
+                            <Text style = {styles.buttontxt}>Select to Compare </Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+                <View style = {styles.list}>
+                    <FlatList
+                        data = {ProgramDetails}
+                        renderItem={({ item }) => <ItemsCompare item = {item} />}
+                        showsVerticalScrollIndicator
+                        
+                    />
+                </View>
+
+            </SafeAreaView>
+        </View>
     )
 }
 
@@ -54,7 +65,6 @@ export default SelectCompare;
 
 const styles = StyleSheet.create({
     container: {
-        position: 'absolute',
         backgroundColor: '#fff',
         opacity: 0.5,
     },
