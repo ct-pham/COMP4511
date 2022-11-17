@@ -9,7 +9,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-        
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
         
     },
     {
@@ -22,7 +22,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'The Centre is open to the public from 9am to 4pm, Monday to Friday. The Centre is closed on weekends and public holidays. The Centre is closed on Christmas Day and New Year’s Day.',
-        
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
     },
     {
         id: '3',
@@ -34,7 +34,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
         
         
     },
@@ -48,7 +48,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
         
     },
     {
@@ -62,7 +62,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
     },
     {  
         id: '6',
@@ -74,7 +74,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
     },
     {
         id: '7',
@@ -86,7 +86,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
     },
     {
         id: '8',
@@ -98,7 +98,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
     },
     {
         id: '9',
@@ -110,7 +110,7 @@ export default [
         image: require('../assets/centre.jpg'),
         description: 'Residents can drop-off plastic bottles and containers, soft plastics, clear, brown and green glass bottles and jars, paper and cardboard, aluminium and steel cans, including aerosols and bulk metals such as fridges, microwaves, etc. You can also visit the Centre to pick up material for reuse such as cardboard boxes.',
         details: 'Randwick Recycling Centre now accepts free of charge: paints, fluorescent tubes and globes, motor and other oils, car and household batteries, mobile phones, used ink cartridges and empty gas cylinders, smoke detectors, fire extinguishers, electronic waste and polystyrene foam. Please note that only household quantities are accepted i.e. kg or 20L ',
-
+        miniDescription: 'Accepts Plastic, Glass, Paper, E-Waste, Paint, Batteries, Oil, Scrap Metal',
 
     },
 

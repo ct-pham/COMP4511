@@ -7,7 +7,7 @@ import {
     View,
     TouchableOpacity,
 } from 'react-native';
-import Items from './ItemCards';
+import Items from './Items';
 import Icon from 'react-native-vector-icons/AntDesign';
 import ProgramDetails from '../ProgramDetails';
 import LeftIcon from 'react-native-vector-icons/AntDesign';
@@ -23,6 +23,7 @@ export default function Compare() {
                 name = "left"
                 size = {32}
                 color = "#587C4B"
+                onPress={() => navigation.navigate('Search')}
             />
             <View style = {styles.titleContainer}>
                 
