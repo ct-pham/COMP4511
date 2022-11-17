@@ -4,11 +4,23 @@ import {
     View,
     TextInput,
     TouchableOpacity,
+    Alert,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function Register( {navigation}) {
+    const showAlert = () => {
+        Alert.alert(
+            "Registration Successful",
+            "Welcome",
+            [
+              {
+                text: "Confirm",
+              },
+            ]
+        )
+    };
     return (
         <View style={styles.container}>
             <View>
@@ -51,7 +63,7 @@ export default function Register( {navigation}) {
                 <Text>By registering, you confirm that you accept our Terms of Service and Privacy policy</Text>
             </View>
 
-            <TouchableOpacity style = {styles.btnStyle}>
+            <TouchableOpacity style = {styles.btnStyle} onPress = {showAlert}>
                 <Text style={styles.registerBtn}>Register</Text>
             </TouchableOpacity>
 

@@ -7,14 +7,15 @@ import {
     View,
     TouchableOpacity,
 } from 'react-native';
-import Items from './ItemCards';
+import Items from './Items';
 import Icon from 'react-native-vector-icons/AntDesign';
 import ProgramDetails from '../ProgramDetails';
 import LeftIcon from 'react-native-vector-icons/AntDesign';
 
 import { useNavigation } from '@react-navigation/native';
 
-export default function Compare(navigation) {
+export default function Compare() {
+    const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
             <LeftIcon 
@@ -22,6 +23,7 @@ export default function Compare(navigation) {
                 name = "left"
                 size = {32}
                 color = "#587C4B"
+                onPress={() => navigation.navigate('Search')}
             />
             <View style = {styles.titleContainer}>
                 
@@ -29,7 +31,7 @@ export default function Compare(navigation) {
                 <Text style = {styles.subtitle}> Disposal Options</Text>
                 <TouchableOpacity 
                     style = {styles.buttonStyle}
-                    onPress = {() => navigation.navigate('SelectCompare')} 
+                    onPress = {() => navigation.navigate('Compare')} 
                 >
                     <View style = {styles.iconContainer}>
                         <Icon
@@ -38,7 +40,7 @@ export default function Compare(navigation) {
                             size = {32}
                             color = '#587C4B'
                         />
-                        <Text style = {styles.buttontxt}>Select to Compare </Text>
+                        <Text style = {styles.buttontxt}>Compare Programs </Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -62,6 +64,9 @@ const styles = StyleSheet.create({
     },
     icon: {
         transform: [{ translateY: -5 }],
+    },
+    container: {
+        backgroundColor: '#fff',
     },
     titleContainer: {
 

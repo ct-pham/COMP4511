@@ -4,11 +4,28 @@ import {
     StyleSheet,
     TextInput,
     TouchableOpacity,
+    Alert,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
-export default function LogItem ( {navigation}) {
+
+export default function LogItem () {
+    const navigation = useNavigation();
+    const createTwoButtonAlert = () =>
+    Alert.alert(
+      "Item Logged",
+      "You have successfully logged the glass bottle",
+      [
+        {
+          text: "Home",
+          onPress: () => navigation.navigate('Home'),
+          style: "cancel"
+        },
+        { text: "Ok" }
+      ]
+    );
 
     return (
         <View style={styles.container}>
@@ -17,6 +34,7 @@ export default function LogItem ( {navigation}) {
                 name = "left"
                 size = {32}
                 color = "#587C4B"
+                onPress = {() => navigation.navigate('ItemResults')}
             />
             <Text style = {styles.title}>Log Item</Text>
             <Text style = {styles.program}>Program X</Text>
@@ -39,7 +57,10 @@ export default function LogItem ( {navigation}) {
             <Text style = {styles.subtitle2}>Earnings</Text>
             <Text style={styles.value}>$0.10</Text>
 
-            <TouchableOpacity style = {styles.confirmBtn}>
+            <TouchableOpacity 
+                style = {styles.confirmBtn}
+                onPress = {createTwoButtonAlert}
+            >
                 <Text style = {styles.confirmText} >Confirm</Text>
             </TouchableOpacity>
         </View>
