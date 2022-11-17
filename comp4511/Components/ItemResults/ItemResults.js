@@ -31,7 +31,7 @@ export default function Compare() {
                 <Text style = {styles.subtitle}> Disposal Options</Text>
                 <TouchableOpacity 
                     style = {styles.buttonStyle}
-                    onPress = {() => navigation.navigate('SelectCompare')} 
+                    onPress = {() => navigation.navigate('Compare')} 
                 >
                     <View style = {styles.iconContainer}>
                         <Icon
@@ -40,7 +40,7 @@ export default function Compare() {
                             size = {32}
                             color = '#587C4B'
                         />
-                        <Text style = {styles.buttontxt}>Select to Compare </Text>
+                        <Text style = {styles.buttontxt}>Compare Programs </Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
     },
     icon: {
         transform: [{ translateY: -5 }],
+    },
+    container: {
+        backgroundColor: '#fff',
     },
     titleContainer: {
 

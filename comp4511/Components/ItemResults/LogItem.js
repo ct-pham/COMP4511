@@ -34,6 +34,7 @@ export default function LogItem () {
                 name = "left"
                 size = {32}
                 color = "#587C4B"
+                onPress = {() => navigation.navigate('ItemResults')}
             />
             <Text style = {styles.title}>Log Item</Text>
             <Text style = {styles.program}>Program X</Text>

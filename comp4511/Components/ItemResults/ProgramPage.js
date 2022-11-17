@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginRight: 20,
         marginLeft: 20,
-        borderRadius: 20,
+        borderRadius: 10,
         alignItems: 'center',
     },
     buttonText: {
         fontSize: 16,
         color: '#587C4B',
-        marginTop: 5,
+        marginTop: 10,
         fontWeight: 'bold',
     },
 

@@ -17,7 +17,6 @@ import ProgramPage from './Components/ItemResults/ProgramPage';
 
 import Search from './Components/Search';
 import Placeholder from './Components/Placeholder';
-import SelectCompare from './Components/ItemResults/SelectCompare';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,7 +41,6 @@ export default function App() {
         <Stack.Screen name="ProgramPage" component={ProgramPage}/>
         <Stack.Screen name="LogItem" component={LogItem}/>
         <Stack.Screen name="Compare" component={Compare}/>
-        <Stack.Screen name="SelectCompare" component={SelectCompare}/>
 
       </Stack.Navigator>
     </NavigationContainer>
