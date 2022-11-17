@@ -23,6 +23,7 @@ export default function Login( {navigation}) {
 
             <Text style = {styles.title}>Recycle App</Text>
             <Text style = {styles.subtitle}>Login</Text>
+            <Text style={styles.inputLabel}>Username</Text>
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -30,7 +31,7 @@ export default function Login( {navigation}) {
                     placeholderTextColor="#003f5c"
                 />
             </View>
-
+            <Text style={styles.inputLabel}>Password</Text>
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -60,7 +61,6 @@ export default function Login( {navigation}) {
                     <Text style = {[styles.btnTxt, {color:'#de4d41'}]} >Sign in with Google</Text>
                 </View>
             </TouchableOpacity>
-                
 
             <TouchableOpacity style = {styles.btnStyle}>
                 <Text style={styles.loginBtn}>Log In</Text>
@@ -79,7 +79,6 @@ export default function Login( {navigation}) {
             >
                 <Text style={styles.btn2}>Use app without signing up</Text>
             </TouchableOpacity>
-
         </View>
     );
 }
@@ -106,6 +105,11 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         opacity: 0.8,
     },
+    inputLabel: {
+        textAlign: 'left',
+        paddingLeft: 45,
+        alignSelf: 'flex-start'
+      },
     button: {
         borderRadius: 25,
     },
@@ -132,16 +136,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 20,
+        borderColor: '#587C4B',
+        borderWidth:2,
     },
     title: {
         fontSize: 32,
         fontWeight: 'bold',
         color: '#587C4B',
+        paddingBottom: 20,
     },
     subtitle: {
         fontSize: 24,
         fontWeight: 'semibold',
         color: '#587C4B',  
+        paddingBottom: 20
     },
     socialBtn: {
         width: '80%',
@@ -162,5 +170,8 @@ const styles = StyleSheet.create({
     btn2: {
         fontSize: 16,
         color: '#587C4B',
-    }
+    },
+    btnTxtWrapper: {
+        paddingBottom:15,
+    },
 });

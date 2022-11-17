@@ -1,15 +1,58 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
 import { Ionicons } from '@expo/vector-icons';
-
+import ProgramDetails from './ProgramDetails';
 
 export default function AllPrograms() {
   const navigation = useNavigation();
   const [isEnabled, setIsEnabled] = useState(false);
+  const [programs, setPrograms] = React.useState(ProgramDetails);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
+  const setProgramDetails = (item, index) => {
+    const array = [...programs];
+    array[index].toggled = !array[index].toggled;
+    setPrograms(array);
+  };
+
+  const ItemView = ({item}) => {
+    return (
+      <View style={{ flexDirection: 'row', width: '100%'}}>
+        <TouchableOpacity 
+          style={{flex: 1, height: 60, justifyContent: 'center'}} 
+          onPress={() => navigation.navigate('ProgramDetails2')}
+        >
+          <Text style={styles.programText}>{item.title}</Text>
+        </TouchableOpacity>
+        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
+          <Switch
+            trackColor={{ false: "ddd", true: "#31be55" }}
+            thumbColor={item.toggled ? "#fff" : "#fff"}
+            ios_backgroundColor="#ddd"
+            onValueChange={event => setProgramDetails(item, Number(item.id)-1)}
+            value={item.toggled}
+          />
+        </View>
+      </View>
+    );
+  };
+ 
+  const ItemSeparatorView = () => {
+    return (
+      // Flat List Item Separator
+      <View
+        style={{
+          height: 1.5,
+          width: '100%',
+          backgroundColor: '#fff',
+          flex:1,
+        }}
+      />
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -37,21 +80,17 @@ export default function AllPrograms() {
         <View style={{justifyContent: 'space-between', width: '88%'}}>
           <Text style={styles.optIn}>OPT IN</Text>
         </View>
-        <TouchableOpacity disabled={true} style={styles.program}>
-          <TouchableOpacity style={{flex: 1}} onPress={() => navigation.navigate('ProgramDetails2')}>
-            <Text style={styles.programText}>Program X</Text>
-          </TouchableOpacity>
-          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
-            <Switch
-              trackColor={{ false: "ddd", true: "#31be55" }}
-              thumbColor={isEnabled ? "#fff" : "#fff"}
-              ios_backgroundColor="#ddd"
-              onValueChange={toggleSwitch}
-              value={isEnabled}
-            />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.log}>
+          
+        <FlatList
+          // style={styles.list}
+          style={{width: '88%'}}
+          data={ProgramDetails}
+          keyExtractor={(item, index) => index.toString()}
+          ItemSeparatorComponent={ItemSeparatorView}
+          renderItem={ItemView}
+        />
+
+        <TouchableOpacity style={styles.log} onPress={() => navigation.navigate('Search')}>
           <Text style={styles.logText}>Log an item</Text>
         </TouchableOpacity>
       </View>
@@ -92,7 +131,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 40,
     alignItems:'center',
-    justifyContent:'center',
+    // justifyContent:'center',
     backgroundColor:'#f2f2f2',
   },
   row: {
@@ -122,7 +161,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: '700',
     color: '#fff',
-    alignItems: 'left',
+    // alignItems: 'left',
   },
   log: {
     borderWidth:2,
@@ -134,11 +173,23 @@ const styles = StyleSheet.create({
     backgroundColor:'#fff',
     borderRadius:20,
     position: 'absolute',
-    bottom: 60
+    bottom: 45,
   },
   logText: {
     fontSize: 18,
     fontWeight: '400',
     color: '#587C4B'
+  },
+  itemStyle: {
+    paddingVertical: 10,
+    height: 60,
+    fontSize: 25,
+    color: '#fff',
+    // flex:1,
+  },
+  results: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

@@ -45,16 +45,16 @@ export default function Items ({item}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
+        // marginTop: StatusBar.currentHeight || 0,
         borderRadius:20,
-        marginBottom: 20,
+        marginBottom: 30,
         shadowColor: '#171717',
         shadowOffset: {width: -10, height: 4},
         shadowOpacity: 0.2,
         shadowRadius: 3,
     },
     item: {
-        padding: 20,
+        // padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
     },
@@ -71,7 +71,11 @@ const styles = StyleSheet.create({
         //alignItems: 'center',
         marginBottom: 1,
         height: 250,
-        width:350
+        width:350,
+        borderRadius:20,
+        borderColor: '#587C4B',
+        borderWidth:2,
+        overflow:'hidden',
     },
     image: {
         width: 350,
@@ -89,6 +93,10 @@ const styles = StyleSheet.create({
         marginRight: 20,
         borderRadius: 10,
         alignItems: 'center',
-    }
+        justifyContent:'center',
+    },
+    buttonText: {
+        color: '#587C4B',
+    },
 
 });

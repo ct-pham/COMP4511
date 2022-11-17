@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -13,7 +13,7 @@ export default function AllEarnings() {
       <View style={styles.container1}>
         <View style={styles.heading}>
           <Text style={styles.title}>All Earnings</Text>
-          <View style={{alignSelf: 'flex-end', paddingLeft:70}}>
+          <View style={{alignSelf: 'flex-end', paddingLeft:40}}>
             <SimpleLineIcons name='pencil' size={25} color='#587C4B' />
             <Text style={styles.edit}>Edit</Text>
           </View>
@@ -41,15 +41,89 @@ export default function AllEarnings() {
         </View>
       </View>
       <View style={styles.container2}>
-        <TouchableOpacity disabled={true} style={styles.item}>
-          <View style={{flex: 1}}>
-            <Text style={styles.itemText}>Glass Bottle</Text>
-            <Text style={styles.itemSubtext}>Program X</Text>
-          </View>
-          <View style={{flex: 1}}>
-            <Text style={styles.itemEarning}>+$0.1</Text>
-          </View>
-        </TouchableOpacity>
+        <ScrollView style={styles.scroll}>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity disabled={true} style={styles.item}>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemText}>Glass Bottle</Text>
+              <Text style={styles.itemSubtext}>Program X</Text>
+            </View>
+            <View style={{flex: 1}}>
+              <Text style={styles.itemEarning}>+$0.1</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
         <TouchableOpacity style={styles.programs} onPress={() => navigation.navigate('ProgramEarnings')}>
           <Text style={styles.programsText}>View Earnings by Program</Text>
         </TouchableOpacity>
@@ -75,13 +149,17 @@ const styles = StyleSheet.create({
     height: '75%',
     backgroundColor: '#587C4B',
     alignItems: 'center',
-    justifyContent: 'centre',
+    // justifyContent: 'centre',
+  },
+  scroll: {
+    width: '100%',
+    paddingLeft: 30,
   },
   heading: {
     flexDirection:'row', 
-    paddingLeft:100, 
+    paddingLeft:70, 
     paddingTop:20, 
-    paddingBottom:15
+    paddingBottom:15,
   },
   title: {
     fontSize: 40,
@@ -99,7 +177,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 40,
     alignItems:'center',
-    justifyContent:'center',
+    // justifyContent:'center',
     backgroundColor:'#f2f2f2',
     marginBottom: 25,
   },
@@ -128,7 +206,7 @@ const styles = StyleSheet.create({
     borderBottomWidth:1,
     borderColor:'#fff',
     width:'90%',
-    height:60,
+    height:80,
     backgroundColor:'#587C4B',
     flexDirection:"row",
     paddingVertical:10
@@ -137,7 +215,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     color: '#fff',
-    alignItems: 'left',
+    // alignItems: 'left',
   },
   itemSubtext: {
     fontSize: 18,

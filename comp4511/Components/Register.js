@@ -21,6 +21,7 @@ export default function Register( {navigation}) {
 
             <Text style = {styles.title}>Recycle App</Text>
             <Text style = {styles.subtitle}>Register</Text>
+            <Text style={styles.inputLabel}>Username</Text>
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -28,7 +29,7 @@ export default function Register( {navigation}) {
                     placeholderTextColor="#003f5c"
                 />
             </View>
-
+            <Text style={styles.inputLabel}>Password</Text>
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -37,6 +38,7 @@ export default function Register( {navigation}) {
                     secureTextEntry={true}
                 />
             </View>
+            <Text style={styles.inputLabel}>Confirm Password</Text>
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -76,7 +78,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ffffff',
         alignItems: 'center',
-        justifyContent: 'center',
+        // justifyContent: 'center',
+        paddingTop: '20%',
     },
     inputView: {
         backgroundColor: '#ffffff',
@@ -93,6 +96,11 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         opacity: 0.8,
     },
+    inputLabel: {
+      textAlign: 'left',
+      paddingLeft: 45,
+      alignSelf: 'flex-start'
+    },
     button: {
         borderRadius: 25,
     },
@@ -101,7 +109,7 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 40,
         alignItems: 'center',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         borderRadius: 10,
         marginBottom:20,
     },
@@ -114,23 +122,29 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 40,
         alignItems: 'center',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         marginBottom: 20,
+        borderColor: '#587C4B',
+        borderWidth:2,
     },
     title: {
         fontSize: 32,
         fontWeight: 'bold',
         color: '#587C4B',
+        marginBottom: 20,
+        marginTop: 10,
     },
     subtitle: {
         fontSize: 24,
         fontWeight: 'semibold',
-        color: '#587C4B',  
+        color: '#587C4B', 
+        marginBottom: 30 
     },
     termStyle: {
         width: '80%',
         height: 40,
         alignItems: 'center',
+        marginBottom:15,
     },
     registerBtn: {
         color: '#ffffff',
@@ -140,5 +154,6 @@ const styles = StyleSheet.create({
     btn2: {
         fontSize: 16,
         color: '#587C4B',
+        paddingTop: 6,
     }
 });

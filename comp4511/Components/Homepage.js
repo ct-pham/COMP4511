@@ -75,10 +75,9 @@ const styles = StyleSheet.create({
   },
   container1: {
     width:'100%',
-    height:'30%',
+    height:'31%',
     backgroundColor: '#587C4B',
     alignItems: 'center',
-    justifyContent: 'centre',
     paddingTop: 70,
   },
   container2: {
@@ -113,12 +112,13 @@ const styles = StyleSheet.create({
   earningsText: {
     fontSize: 20,
     fontWeight: '600',
-    color: '#587C4B'
+    color: '#587C4B',
   },
   searchText: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '400',
-    color: '#587C4B'
+    color: '#587C4B',
+    marginLeft: 10,
   },
   allPrograms: {
     borderWidth:2,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     borderTopWidth:1,
     borderColor:'#587C4B',
     alignItems:'center',
-    justifyContent:'center',
+    // justifyContent:'center',
     width:'100%',
     height:50,
     backgroundColor:'#fff',
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     borderBottomWidth:1,
     borderColor:'#587C4B',
     alignItems:'center',
-    justifyContent:'center',
+    // justifyContent:'center',
     width:'100%',
     height:50,
     backgroundColor:'#fff',

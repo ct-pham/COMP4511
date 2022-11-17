@@ -36,7 +36,7 @@ export default function Search() {
   const ItemView = ({item}) => {
     return (
       // Flat List Item
-      <TouchableOpacity style={styles.results} onPress={() => navigation.navigate('Placeholder')}>
+      <TouchableOpacity style={styles.results} onPress={() => navigation.navigate('ItemResults')}>
         <Text style={styles.itemStyle}>{item.name}</Text>
         <Ionicons name='chevron-forward' color={'#587C4B'} size={25}/>
       </TouchableOpacity>
@@ -83,7 +83,7 @@ export default function Search() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: '40%',
+    marginTop: 50,
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     color: "#587C4B",
   },
   itemStyle: {
-    paddingVertical: 15,
+    paddingVertical: 10,
     height: 50,
     fontSize: 20,
     color: '#587C4B',
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   results: {
     flexDirection: 'row',
-    // justifyContent: 'center',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   list: {
