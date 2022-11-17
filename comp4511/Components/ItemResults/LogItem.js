@@ -30,11 +30,11 @@ export default function LogItem () {
     return (
         <View style={styles.container}>
             <Icon 
-                style = {styles.icon}
+                style = {styles.back}
                 name = "left"
                 size = {32}
                 color = "#587C4B"
-                onPress = {() => navigation.navigate('ItemResults')}
+                onPress = {() => navigation.pop()}
             />
             <Text style = {styles.title}>Log Item</Text>
             <Text style = {styles.program}>Program X</Text>
@@ -44,6 +44,7 @@ export default function LogItem () {
                     style={styles.TextInput}
                     placeholder="Glass Bottle"
                     placeholderTextColor="#587C4B"
+                    editable={false}
                 />
             </View>
             <Text style = {styles.subtitle}>Quantity</Text>
@@ -52,6 +53,7 @@ export default function LogItem () {
                     style={styles.TextInput}
                     placeholder="1"
                     placeholderTextColor="#587C4B"
+                    keyboardType="numeric"
                 />
             </View>
             <Text style = {styles.subtitle2}>Earnings</Text>
@@ -68,8 +70,8 @@ export default function LogItem () {
 }
 
 const styles = StyleSheet.create({
-    icon: {
-      transform: [{ translateX: -150 }, { translateY: -40 }],  
+    back: {
+      transform: [{ translateX: -170 }, { translateY: -60 }],  
     },
     container: {
         flex: 1,
@@ -100,13 +102,13 @@ const styles = StyleSheet.create({
         width: '80%',
         margin: 12,
         borderWidth: 1,
-        padding: 10,
         shadowColor: '#171717',
         shadowOffset: {width: -2, height: 4},
         shadowOpacity: 0.2,
         shadowRadius: 3,
         opacity: 0.8,
         alignItems: 'center',
+        justifyContent: 'center',
         borderRadius: 10,
         borderColor: '#587C4B',
     },

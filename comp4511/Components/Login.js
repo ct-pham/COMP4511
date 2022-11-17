@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     btnTxt: {
         fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 16,
     },
     loginBtn: {
         color: '#ffffff',
@@ -173,6 +173,6 @@ const styles = StyleSheet.create({
         color: '#587C4B',
     },
     btnTxtWrapper: {
-        paddingBottom:15,
+        // justifyContent: 'center',
     },
 });

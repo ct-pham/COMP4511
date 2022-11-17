@@ -4,6 +4,8 @@ import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
 import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
+
 
 export default function AllEarnings() {
   const navigation = useNavigation();
@@ -11,6 +13,15 @@ export default function AllEarnings() {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
+        <View>          
+          <LeftIcon 
+            style = {styles.back}
+            name = "left"
+            size = {32}
+            color = "#587C4B"
+            onPress={() => navigation.pop()}
+          />
+        </View>
         <View style={styles.heading}>
           <Text style={styles.title}>All Earnings</Text>
           <View style={{alignSelf: 'flex-end', paddingLeft:40}}>
@@ -140,7 +151,7 @@ const styles = StyleSheet.create({
   },
   container1: {
     width:'100%',
-    height: '25%',
+    height: '28%',
     backgroundColor: '#fff',
     alignItems: 'center',
   },  
@@ -149,7 +160,6 @@ const styles = StyleSheet.create({
     height: '75%',
     backgroundColor: '#587C4B',
     alignItems: 'center',
-    // justifyContent: 'centre',
   },
   scroll: {
     width: '100%',
@@ -158,8 +168,11 @@ const styles = StyleSheet.create({
   heading: {
     flexDirection:'row', 
     paddingLeft:70, 
-    paddingTop:20, 
     paddingBottom:15,
+  },
+  back: {
+    paddingTop:30,
+    paddingRight:350,
   },
   title: {
     fontSize: 40,

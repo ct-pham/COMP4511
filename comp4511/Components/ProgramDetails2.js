@@ -3,6 +3,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { style } from '@mui/system';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
 
 export default function ProgramDetails2() {
   const navigation = useNavigation();
@@ -12,6 +13,13 @@ export default function ProgramDetails2() {
       <View style={styles.container1}>
         <Image source={require('../assets/centre.jpg')}/>
       </View>
+      <LeftIcon 
+        style = {styles.back}
+        name = "left"
+        size = {32}
+        color = "#587C4B"
+        onPress={() => navigation.pop()}
+      />
       <View style={styles.container2}>
         <ScrollView style={styles.textWrapper}>
           <Text style={styles.title}>Program X</Text>
@@ -73,6 +81,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#587C4B',
     justifyContent: 'space-between',
     flexDirection: 'row',
+  },
+  back: {
+    transform: [{ translateX: -170 }, { translateY: 30 }],  
+    position: 'absolute',
   },
   textWrapper: {
     flex:1,

@@ -2,11 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
-// import { Searchbar } from 'react-native-paper';
-// import { SearchBar } from 'react-native-elements';
 import SearchBar from "react-native-dynamic-search-bar";
 import SearchItems from './SearchItems';
 import { Ionicons } from '@expo/vector-icons';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
 
 
 export default function Search() {
@@ -63,6 +62,13 @@ export default function Search() {
 
   return (
     <View style={styles.container}>
+      <LeftIcon 
+        style = {styles.back}
+        name = "left"
+        size = {32}
+        color = "#587C4B"
+        onPress={() => navigation.pop()}
+      />
       <SearchBar
         placeholder="Search here..."
         // onPress={() => alert("onPress")}
@@ -83,11 +89,14 @@ export default function Search() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  back: {
+    paddingTop:30,
+    paddingRight:350,
   },
   search: {
     height: 50,

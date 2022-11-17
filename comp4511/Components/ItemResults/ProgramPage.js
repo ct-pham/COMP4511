@@ -22,11 +22,11 @@ export default function ProgramPage () {
                 source={require('./centre.jpg')}
             />  
             <LeftIcon 
-                style = {styles.LeftIcon}
+                style = {styles.back}
                 name = "left"
                 size = {32}
                 color = "#587C4B"
-                onPress={() => navigation.navigate('ItemResults')}
+                onPress={() => navigation.pop()}
             />
             <View style = {styles.txtContainer}>
                 <Text style = {styles.title}>Program X</Text>
@@ -50,8 +50,8 @@ export default function ProgramPage () {
 }
 
 const styles = StyleSheet.create({
-    LeftIcon: {
-        transform: [{ translateX: 20 }, { translateY: 50 }],  
+    back: {
+        transform: [{ translateX: 20 }, { translateY: 30 }],  
         position: 'absolute',
     },
     container: {

@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ffffff',
         alignItems: 'center',
-        // justifyContent: 'center',
         paddingTop: '20%',
     },
     inputView: {
@@ -121,7 +120,6 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 40,
         alignItems: 'center',
-        // justifyContent: 'center',
         borderRadius: 10,
         marginBottom:20,
     },
@@ -134,7 +132,6 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 40,
         alignItems: 'center',
-        // justifyContent: 'center',
         marginBottom: 20,
         borderColor: '#587C4B',
         borderWidth:2,

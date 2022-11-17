@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
 import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
 
 export default function ProgramEarnings() {
   const navigation = useNavigation();
@@ -11,6 +12,15 @@ export default function ProgramEarnings() {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
+        <View>
+          <LeftIcon 
+            style = {styles.back}
+            name = "left"
+            size = {32}
+            color = "#587C4B"
+            onPress={() => navigation.pop()}
+          />          
+        </View>
         <View style={styles.heading}>
           <Text style={styles.title}>Program Earnings</Text>
           <View style={{alignSelf: 'flex-end', paddingHorizontal:10}}>
@@ -144,7 +154,7 @@ const styles = StyleSheet.create({
   },
   container1: {
     width:'100%',
-    height: '25%',
+    height: '28%',
     backgroundColor: '#fff',
     alignItems: 'center',
   },  
@@ -162,8 +172,11 @@ const styles = StyleSheet.create({
   heading: {
     flexDirection:'row', 
     paddingLeft:50, 
-    paddingTop:20, 
     paddingBottom:15,
+  },
+  back: {
+    paddingTop:30,
+    paddingRight:350,
   },
   title: {
     fontSize: 40,

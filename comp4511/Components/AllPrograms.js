@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
 import { Ionicons } from '@expo/vector-icons';
 import ProgramDetails from './ProgramDetails';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
 
 export default function AllPrograms() {
   const navigation = useNavigation();
@@ -57,6 +58,13 @@ export default function AllPrograms() {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
+        <LeftIcon 
+          style = {styles.back}
+          name = "left"
+          size = {32}
+          color = "#587C4B"
+          onPress={() => navigation.pop()}
+        />
         <Text style={styles.title}>Cash Back Programs</Text>
         <SelectDropdown
           data={['closest to current location', 'highest earnings', 'most frequent participation', 'alphabetical']}
@@ -82,7 +90,6 @@ export default function AllPrograms() {
         </View>
           
         <FlatList
-          // style={styles.list}
           style={{width: '88%'}}
           data={ProgramDetails}
           keyExtractor={(item, index) => index.toString()}
@@ -106,7 +113,7 @@ const styles = StyleSheet.create({
   },
   container1: {
     width:'100%',
-    height: '20%',
+    height: '23%',
     backgroundColor: '#fff',
     alignItems: 'center',
   },  
@@ -117,11 +124,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 30,
   },
+  back: {
+    transform: [{ translateX: -170 }, { translateY: 30 }],  
+    paddingBottom:30,
+  },
   title: {
     fontSize: 40,
     fontWeight: '700',
     color: '#587C4B',
-    paddingTop:30,
     paddingBottom:20,
   },
   dropdown: {

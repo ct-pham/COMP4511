@@ -19,11 +19,11 @@ export default function Compare() {
     return (
         <SafeAreaView style={styles.container}>
             <LeftIcon 
-                style = {styles.LeftIcon}
+                style = {styles.back}
                 name = "left"
                 size = {32}
                 color = "#587C4B"
-                onPress={() => navigation.navigate('Search')}
+                onPress={() => navigation.pop()}
             />
             <View style = {styles.titleContainer}>
                 
@@ -59,8 +59,9 @@ export default function Compare() {
 }
 
 const styles = StyleSheet.create({
-    LeftIcon: {
-        transform: [{ translateX: 20 }],  
+    back: {
+        paddingTop:30,
+        paddingLeft:20,
     },
     icon: {
         transform: [{ translateY: -5 }],
