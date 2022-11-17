@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 24,
         fontWeight: 'semibold',
+        marginTop: 5,
     },
     btn2: {
         fontSize: 16,

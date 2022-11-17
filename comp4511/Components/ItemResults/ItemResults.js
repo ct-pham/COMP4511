@@ -60,8 +60,8 @@ export default function Compare() {
 
 const styles = StyleSheet.create({
     back: {
-        paddingTop:30,
         paddingLeft:20,
+        marginBottom:20,
     },
     icon: {
         transform: [{ translateY: -5 }],

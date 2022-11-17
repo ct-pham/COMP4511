@@ -129,7 +129,6 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: '#587C4B',
-        marginTop: 5,
     },
 
 });
