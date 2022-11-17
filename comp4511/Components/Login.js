@@ -62,7 +62,7 @@ export default function Login( {navigation}) {
             </TouchableOpacity>
                 
 
-            <TouchableOpacity style = {styles.btnStyle}>
+            <TouchableOpacity style = {styles.btnStyle} onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.loginBtn}>Log In</Text>
             </TouchableOpacity>
 
@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
     btnTxt: {
         fontSize: 18,
         fontWeight: 'bold',
+        marginBottom: 20,
     },
     loginBtn: {
         color: '#ffffff',
