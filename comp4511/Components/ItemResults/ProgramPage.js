@@ -12,7 +12,7 @@ import { useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import LeftIcon from 'react-native-vector-icons/AntDesign';
 
-export default function ProgramPage ({item}) {
+export default function ProgramPage () {
     const navigation = useNavigation();
     const {height, width} = useWindowDimensions();
     return (

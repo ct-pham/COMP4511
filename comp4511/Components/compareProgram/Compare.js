@@ -9,10 +9,21 @@ import {
 import Items from './Items';
 
 import ProgramDetails from '../ProgramDetails';
+import LeftIcon from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Compare() {
     return (
+        
         <SafeAreaView style={styles.container}>
+            <LeftIcon 
+                style = {styles.LeftIcon}
+                name = "left"
+                size = {32}
+                color = "#587C4B"
+                onPress={() => navigation.navigate('ItemResults')}
+            />
+            
             <View style = {styles.titleContainer}>
                 <Text style = {styles.title}> Compare Programs</Text>
             </View>
@@ -39,5 +50,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginTop: 10,
-    }
+    },
+    LeftIcon: {
+        transform: [{ translateX: 20 }, { translateY: 50 }],  
+        position: 'absolute',
+    },
 });
