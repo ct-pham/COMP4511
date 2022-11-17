@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 import { useState } from 'react';
 
-
+import { useNavigation } from '@react-navigation/native';
 
 export default function Items ({item}) {
-
+    const navigation = useNavigation();
 
     return (
         <View 

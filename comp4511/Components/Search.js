@@ -36,7 +36,7 @@ export default function Search() {
   const ItemView = ({item}) => {
     return (
       // Flat List Item
-      <TouchableOpacity style={styles.results} onPress={() => navigation.navigate('Placeholder')}>
+      <TouchableOpacity style={styles.results} onPress={() => navigation.navigate('ItemResults')}>
         <Text style={styles.itemStyle}>{item.name}</Text>
         <Ionicons name='chevron-forward' color={'#587C4B'} size={25}/>
       </TouchableOpacity>
