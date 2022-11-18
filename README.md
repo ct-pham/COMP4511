@@ -71,5 +71,8 @@ Most features are hard coded and interacting with them will not affect other par
 
 * Log item buttons for all programs will navigate to the same page for program X
 * Changing the quantity in the log items page does not change the displayed earnings amount
+* Toggling the opt in option for different programs does not affect their display in the search results
+* All programs in the "Cash Back Programs" page will navigate to the same page for program X
+* "Frequently asked questions", "contact us", and "settings" features are non-functional 
 
-Any other aspects of the app should be fully functional.
+Any other aspects of the app should be fully functional in their display.
