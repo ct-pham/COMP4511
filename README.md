@@ -55,8 +55,7 @@ Depending on your device's model, sizing and spacing may become an issue while n
 
 Most features are hard coded and interacting with them will not affect other parts of the app.
 
-- login and register details
-
+* Users are able to input login and register details however the data will not be stored anywhere
 * No aspect of the app is based on location
 * All programs and locations have placeholder names and images
 * All dropdown menus will not change the content displayed on the page
@@ -64,11 +63,8 @@ Most features are hard coded and interacting with them will not affect other par
 * Edit feature is non-functional 
 * Searching for items will only search through a small list of hard coded items
 * All items in the search list (e.g. glass bottle, beer glass, glue) will navigate to the same page for glass bottle disposal options
-
-- compare programs
-- program details
-- log items
-
+* compare programs will show a list of hard coded programs and a map image.
+* all program details have been hard coded and each program will have the same content
 * Log item buttons for all programs will navigate to the same page for program X
 * Changing the quantity in the log items page does not change the displayed earnings amount
 
