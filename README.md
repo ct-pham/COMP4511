@@ -42,8 +42,7 @@ Start your emulator of choice in android studio for android devices or on mac fo
 ### The recommended devices are:
 
 * `Google Pixel 6`
-* `iphone 13/14`
-* `iphone 13/14 pro`
+
 
 ### View with Expo Go App
 
