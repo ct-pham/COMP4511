@@ -55,7 +55,7 @@ Depending on your device's model, sizing and spacing may become an issue while n
 
 Most features are hard coded and interacting with them will not affect other parts of the app.
 
-* Users are able to input login and register details however the data will not be stored anywhere
+* Users are able to input any login and register details as the data is not be stored anywhere
 * No aspect of the app is based on location
 * All programs and locations have placeholder names and images
 * All dropdown menus will not change the content displayed on the page
