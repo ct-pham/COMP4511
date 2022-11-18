@@ -54,6 +54,7 @@ Depending on your device's model, sizing and spacing may become an issue while n
 
 Most features are hard coded and interacting with them will not affect other parts of the app.
 
+* Stack navigation will be available between all pages by swiping (e.g. you are able to navigate from home back to register), however the intended navigation is through the use of buttons and back buttons
 * Users are able to input any login and register details as the data is not be stored anywhere
 * No aspect of the app is based on location
 * All programs and locations have placeholder names and images
