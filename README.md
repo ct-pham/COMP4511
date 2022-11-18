@@ -35,11 +35,7 @@ This will start the metro bundler. There are two ways to view the app:
 
 ## View
 
-### View with Expo Go App
-
-Scan the QR code in the terminal with your device's camera to view the app. You will need the Expo Go app from the app store. 
-
-### View with Emulator
+### View with Emulator (recommended)
 
 Start your emulator of choice in android studio for android devices or on mac for ios devices. 
 
@@ -49,4 +45,31 @@ Start your emulator of choice in android studio for android devices or on mac fo
 * `iphone 13/14`
 * `iphone 13/14 pro`
 
+### View with Expo Go App
 
+Scan the QR code in the terminal with your device's camera to view the app. You will need the Expo Go app from the app store. 
+
+Depending on your device's model, sizing and spacing may become an issue while navigating through the app.
+
+## Functionality
+
+Most features are hard coded and interacting with them will not affect other parts of the app.
+
+- login and register details
+
+* No aspect of the app is based on location
+* All programs and locations have placeholder names and images
+* All dropdown menus will not change the content displayed on the page
+* Earnings amount will not change after logging items
+* Edit feature is non-functional 
+* Searching for items will only search through a small list of hard coded items
+* All items in the search list (e.g. glass bottle, beer glass, glue) will navigate to the same page for glass bottle disposal options
+
+- compare programs
+- program details
+- log items
+
+* Log item buttons for all programs will navigate to the same page for program X
+* Changing the quantity in the log items page does not change the displayed earnings amount
+
+Any other aspects of the app should be fully functional.
