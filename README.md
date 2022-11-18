@@ -71,8 +71,4 @@ Most features are hard coded and interacting with them will not affect other par
 * All programs in the "Cash Back Programs" page will navigate to the same page for program X
 * "Frequently asked questions", "contact us", and "settings" features are non-functional 
 
-<<<<<<< HEAD
 Any other aspects of the app should be fully functional in their display.
-=======
-Any other aspects of the app should be fully functional.
->>>>>>> b9be93763b4fd2e7f9f57b833a5b03c4466e4a9e
